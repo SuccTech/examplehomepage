@@ -7,7 +7,7 @@
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: url("Image1.jpg"),linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)) ;
+    background-image: url("Image1.jpg"), linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
     background-size: cover;
     background-position: center;
 }
@@ -19,16 +19,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* added for mobile wrapping */
 }
 
 .logo {
     cursor: pointer;
 }
 
+/* Navbar links */
+.navbar ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .navbar ul li {
     list-style: none;
-    display: inline-block;
-    margin: 0 20px;
+    margin: 10px 15px;
     position: relative;
 }
 
@@ -53,6 +61,7 @@
     width: 100%;
 }
 
+/* Content */
 .content {
     width: 100%;
     position: absolute;
@@ -60,6 +69,7 @@
     transform: translateY(-50%);
     text-align: center;
     color: #fff;
+    padding: 0 20px;
 }
 
 .content h1 {
@@ -73,6 +83,7 @@
     line-height: 25px;
 }
 
+/* Buttons */
 button {
     width: 200px;
     padding: 15px 0;
@@ -106,4 +117,60 @@ button:hover span {
 
 button:hover {
     border: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    .content p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    button {
+        width: 150px;
+        padding: 12px 0;
+        font-size: 14px;
+        margin: 15px 5px;
+    }
+
+    .navbar ul li {
+        margin: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 28px;
+        margin-top: 30px;
+    }
+
+    .content p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    button {
+        width: 130px;
+        padding: 10px 0;
+        font-size: 12px;
+        margin: 10px 3px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
 }
