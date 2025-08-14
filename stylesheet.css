@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* added for mobile wrapping */
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
 .logo {
@@ -84,11 +84,17 @@
 }
 
 /* Buttons */
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 button {
     width: 200px;
     padding: 15px 0;
     text-align: center;
-    margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
     border: 2px solid #009688;
@@ -119,7 +125,7 @@ button:hover {
     border: none;
 }
 
-/* Mobile Responsiveness */
+/* Tablet responsiveness */
 @media (max-width: 768px) {
     .content h1 {
         font-size: 40px;
@@ -135,42 +141,7 @@ button:hover {
         width: 150px;
         padding: 12px 0;
         font-size: 14px;
-        margin: 15px 5px;
     }
 
     .navbar ul li {
-        margin: 8px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .content h1 {
-        font-size: 28px;
-        margin-top: 30px;
-    }
-
-    .content p {
-        font-size: 14px;
-        line-height: 20px;
-    }
-
-    button {
-        width: 130px;
-        padding: 10px 0;
-        font-size: 12px;
-        margin: 10px 3px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-    }
-
-    .navbar ul li {
-        margin: 5px 0;
-    }
-}
+        margin:
