@@ -3,54 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> God's Grace Business Entreprises </title>
+    <title>God's Grace Business Entreprises</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
+    
     <div class="banner">
         <div class="navbar">
             <img src="logo.jpg" class="logo" width="125px" height="100px">
 
-                <div class="menu-toggle" id="menu-toggle">
-    &#9776; <!-- Hamburger icon ☰ -->
-</div>
-            
-            <ul>
-                <li> <a href="#">Home</a></li>
-                <li> <a href="#">Product</a></li>
-                <li> <a href="#">Address</a></li>
-                <li> <a href="#">Phone Number</a></li>
-                <li> <a href="#">Contact</a></li>
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776;
+            </div>
+
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Product</a></li>
+                <li><a href="#address">Address</a></li>
+                <li><a href="tel:+2348012345678">Phone Number</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
 
-        <div class="content">
-            <h1> God's Grace Entreprise</h1>
-            <p> You Are Welcome to our Website, We are Available Everywhere for your Orders, Order Immediately,
-                <br>Press the bell icon to get the latest Product.
+        <div class="content" id="home">
+            <h1>God's Grace Entreprise</h1>
+            <p>You Are Welcome to our Website, We are Available Everywhere for your Orders.<br>
+                Press the bell icon to get the latest Product.
             </p>
-
             <div>
                 <button type="button"><span></span>ORDER HERE</button>
                 <button type="button"><span></span>AVAILABLE PRODUCT</button>
             </div>
-
         </div>
-
     </div>
 
+    <!-- Sections for mobile + desktop -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <p>We sell building materials, groceries, foodstuffs, and more...</p>
+    </section>
+
+    <section id="address">
+        <h2>Our Address</h2>
+        <p>No. 12 Market Road, Lagos, Nigeria</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@godsgrace.com</p>
+        <p>WhatsApp: +234 801 234 5678</p>
+    </section>
+
     <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
 
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('show');
-    });
-</script>
-
-    
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
-
-
-
