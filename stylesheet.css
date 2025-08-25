@@ -9,6 +9,41 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Hamburger menu (hidden on desktop) */
+.menu-toggle {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Mobile navbar */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 220px;
+        padding: 15px;
+        display: none;
+    }
+
+    .navbar ul li {
+        margin: 15px 0;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+}
+
+
 /* Banner styling */
 .banner {
     width: 100%;
@@ -100,4 +135,5 @@ button:hover {
         right: 0;
         width: 200px;
         display: none; /* We’ll*
+
 
